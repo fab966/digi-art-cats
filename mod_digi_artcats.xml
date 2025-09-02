@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module" version="5.0" client="site">
+    <name>Mod Digi ArtCats</name>
+    <author>Fabrizio Galuppi</author>
+    <creationDate>September 2025</creationDate>
+    <copyright>Copyright (C) 2012 - orware. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>public2@digitest.net</authorEmail>
+    <authorUrl>digitest.net</authorUrl>
+    <version>5.0.2</version>
+    <description>MOD_DIGI_ARTCATS_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Module\DigiArtCats</namespace>
+    <files>
+        <filename module="mod_digi_artcats">mod_digi_artcats.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>src</folder>
+        <filename>index.html</filename>
+        <filename>mod_digi_artcats.xml</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_digi_artcats.ini</language>
+        <language tag="it-IT">language/it-IT/mod_digi_artcats.ini</language>
+    </languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTICLES_CATEGORIES" />
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="mode" type="radio" default="dynamic"
+                    label="MOD_DIGI_ARTCATS_FIELD_MODE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_MODE_DESC"
+                    >
+                    <option value="normal">MOD_DIGI_ARTCATS_OPTION_NORMAL_VALUE
+                    </option>
+                    <option value="dynamic">MOD_DIGI_ARTCATS_OPTION_DYNAMIC_VALUE
+                    </option>
+                </field>
+
+                <field name="title_mode" type="radio" default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_TITLEMODE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_TITLEMODE_DESC"
+                    >
+                    <option value="0">MOD_DIGI_ARTCATS_OPTION_NORMAL_VALUE
+                    </option>
+                    <option value="1">MOD_DIGI_ARTCATS_OPTION_DYNAMIC_VALUE
+                    </option>
+                </field>
+
+                <field name="list_mode" type="radio" default="combined"
+                    label="MOD_DIGI_ARTCATS_FIELD_LISTMODE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_LISTMODE_DESC"
+                    >
+                    <option value="combined">MOD_DIGI_ARTCATS_OPTION_LISTMODECOMBINED_VALUE
+                    </option>
+                    <option value="articles">MOD_DIGI_ARTCATS_OPTION_LISTMODEARTICLES_VALUE
+                    </option>
+                    <option value="categories">MOD_DIGI_ARTCATS_OPTION_LISTMODECATEGORIES_VALUE
+                    </option>
+                </field>
+            </fieldset>
+
+            <fieldset name="dynamic"
+                label="MOD_DIGI_ARTCATS_FIELD_GROUP_DYNAMIC_LABEL"
+                >
+                <field name="show_on_article_page" type="radio"
+                    default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOWONARTICLEPAGE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWONARTICLEPAGE_DESC"
+                    >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="category">
+                <field
+                    name="parent"
+                    type="category"
+                    extension="com_content"
+                    published=""
+                    label="MOD_DIGI_ARTCATS_FIELD_PARENT_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_PARENT_DESC"/>
+                <field
+                    name="show_description"
+                    type="radio"
+                    default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOW_DESCRIPTION_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOW_DESCRIPTION_DESC">
+                    <option
+                        value="0">JNO</option>
+                    <option
+                        value="1">JYES</option>
+                </field>
+                <field
+                    name="show_children"
+                    type="radio"
+                    default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOW_CHILDREN_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOW_CHILDREN_DESC">
+                    <option
+                        value="0">JNO</option>
+                    <option
+                        value="1">JYES</option>
+                </field>
+
+                <field name="count" type="list"
+                    label="MOD_DIGI_ARTCATS_FIELD_COUNT_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_COUNT_DESC"
+                    default="0"
+                    >
+                    <option value="0">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                <field name="maxlevel" type="list"
+                    label="MOD_DIGI_ARTCATS_FIELD_MAXLEVEL_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_MAXLEVEL_DESC"
+                    default="2"
+                    >
+                    <option value="0">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                <field name="show_child_category_articles" type="radio"
+                    default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOWCHILDCATEGORYARTICLES_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWCHILDCATEGORYARTICLES_DESC"
+                    >
+                    <option value="1">MOD_DIGI_ARTCATS_OPTION_INCLUDE_VALUE
+                    </option>
+                    <option value="0">MOD_DIGI_ARTCATS_OPTION_EXCLUDE_VALUE
+                    </option>
+                </field>
+
+                <field name="link_categories" type="radio"
+                    default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_LINKCATEGORIES_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_LINKCATEGORIES_DESC"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="max_articles" type="list"
+                    label="MOD_DIGI_ARTCATS_FIELD_MAX_ARTICLES_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_MAX_ARTICLES_DESC"
+                    default="0"
+                    >
+                    <option value="0">JALL</option>
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="6">J6</option>
+                    <option value="7">J7</option>
+                    <option value="8">J8</option>
+                    <option value="9">J9</option>
+                    <option value="10">J10</option>
+                </field>
+
+                 <field name="featured_only" type="list"
+                    default="show"
+                    label="MOD_DIGI_ARTCATS_FIELD_FEATURED_ONLY_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_FEATURED_ONLY_DESC"
+                    >
+                    <option value="show">JALL</option>
+                    <option value="only">JFEATURED</option>
+                    <option value="hide">JUNFEATURED</option>
+                </field>
+
+            </fieldset>
+
+            <fieldset name="ordering"
+                label="MOD_DIGI_ARTCATS_FIELD_GROUP_ORDERING_LABEL"
+                >
+                <field name="ordering" type="list"
+                    default="title"
+                    label="MOD_DIGI_ARTCATS_FIELD_ORDERING_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ORDERING_DESC"
+                    >
+                    <option value="lft">MOD_DIGI_ARTCATS_OPTION_ORDERING_VALUE
+                    </option>
+                    <option value="title">JGLOBAL_TITLE
+                    </option>
+                    <option value="id">MOD_DIGI_ARTCATS_OPTION_ID_VALUE
+                    </option>
+                    <option value="hits">MOD_DIGI_ARTCATS_OPTION_HITS_VALUE
+                    </option>
+                    <option value="alias">JFIELD_ALIAS_LABEL
+                    </option>
+                    <option value="created_time">MOD_DIGI_ARTCATS_OPTION_CREATED_VALUE
+                    </option>
+                    <option value="modified_time">MOD_DIGI_ARTCATS_OPTION_MODIFIED_VALUE
+                    </option>
+                    <option value="publish_up">MOD_DIGI_ARTCATS_OPTION_STARTPUBLISHING_VALUE
+                    </option>
+                    <option value="publish_down">MOD_DIGI_ARTCATS_OPTION_FINISHPUBLISHING_VALUE
+                    </option>
+                </field>
+
+                <field name="ordering_direction" type="list"
+                    default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_ORDERINGDIR_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ORDERINGDIR_DESC"
+                    >
+                    <option value="-1">MOD_DIGI_ARTCATS_OPTION_DESCENDING_VALUE
+                    </option>
+                    <option value="1">MOD_DIGI_ARTCATS_OPTION_ASCENDING_VALUE
+                    </option>
+                </field>
+
+                <field name="ordering_case" type="list"
+                    default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_ORDERINGCASE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ORDERINGCASE_DESC"
+                    >
+                    <option value="0">MOD_DIGI_ARTCATS_OPTION_CASEINSENSITIVE_VALUE
+                    </option>
+                    <option value="1">MOD_DIGI_ARTCATS_OPTION_CASESENSITIVE_VALUE
+                    </option>
+                </field>
+
+                <field name="ordering_locale" type="list"
+                    default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_ORDERINGLOCALE_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ORDERINGLOCALE_DESC"
+                    >
+                    <option value="0">MOD_DIGI_ARTCATS_OPTION_FALSE_VALUE
+                    </option>
+                    <option value="1">MOD_DIGI_ARTCATS_OPTION_TRUE_VALUE
+                    </option>
+                </field>
+
+                <field name="article_ordering" type="list"
+                    default="a.title"
+                    label="MOD_DIGI_ARTCATS_FIELD_ARTICLEORDERING_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ARTICLEORDERING_DESC"
+                    >
+                    <option value="a.ordering">MOD_DIGI_ARTCATS_OPTION_ORDERING_VALUE
+                    </option>
+                    <option value="fp.ordering">MOD_DIGI_ARTCATS_OPTION_ORDERINGFEATURED_VALUE
+                    </option>
+                    <option value="a.hits">MOD_DIGI_ARTCATS_OPTION_HITS_VALUE
+                    </option>
+                    <option value="a.title">JGLOBAL_TITLE
+                    </option>
+                    <option value="a.id">MOD_DIGI_ARTCATS_OPTION_ID_VALUE
+                    </option>
+                    <option value="a.alias">JFIELD_ALIAS_LABEL
+                    </option>
+                    <option value="a.created">MOD_DIGI_ARTCATS_OPTION_CREATED_VALUE
+                    </option>
+                    <option value="modified">MOD_DIGI_ARTCATS_OPTION_MODIFIED_VALUE
+                    </option>
+                    <option value="publish_up">MOD_DIGI_ARTCATS_OPTION_STARTPUBLISHING_VALUE
+                    </option>
+                    <option value="a.publish_down">MOD_DIGI_ARTCATS_OPTION_FINISHPUBLISHING_VALUE
+                    </option>
+                </field>
+
+                <field name="article_ordering_direction" type="list"
+                    default="ASC"
+                    label="MOD_DIGI_ARTCATS_FIELD_ARTICLEORDERINGDIR_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ARTICLEORDERINGDIR_DESC"
+                    >
+                    <option value="DESC">MOD_DIGI_ARTCATS_OPTION_DESCENDING_VALUE
+                    </option>
+                    <option value="ASC">MOD_DIGI_ARTCATS_OPTION_ASCENDING_VALUE
+                    </option>
+                </field>
+
+                <field name="article_category_ordering" type="list"
+                    default="ASC"
+                    label="MOD_DIGI_ARTCATS_FIELD_ARTCATORDERING_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_ARTCATORDERING_DESC"
+                    >
+                    <option value="Art">MOD_DIGI_ARTCATS_OPTION_ART_FIRST
+                    </option>
+                    <option value="Cat">MOD_DIGI_ARTCATS_OPTION_CAT_FIRST
+                    </option>
+                </field>
+
+            </fieldset>
+            <fieldset name="display"
+                label="MOD_DIGI_ARTCATS_FIELD_GROUP_DISPLAY_LABEL"
+                >
+                <field name="use_headings" type="radio" default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_USEHEADINGS_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_USEHEADINGS_DESC"
+                    >
+                    <option value="1">JYES
+                    </option>
+                    <option value="0">JNO
+                    </option>
+                </field>
+
+                <field name="item_heading" type="list" default="4"
+                    label="MOD_DIGI_ARTCATS_TITLE_HEADING_LABEL"
+                    description="MOD_DIGI_ARTCATS_TITLE_HEADING_DESC"
+                    >
+                    <option value="1">JH1</option>
+                    <option value="2">JH2</option>
+                    <option value="3">JH3</option>
+                    <option value="4">JH4</option>
+                    <option value="5">JH5</option>
+                    <option value="6">JH6</option>
+                </field>
+
+                <field name="show_empty_categories" type="radio" default="1"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOWEMPTYCATEGORIES_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWEMPTYCATEGORIES_DESC"
+                    >
+                    <option value="1">JSHOW
+                    </option>
+                    <option value="0">JHIDE
+                    </option>
+                </field>
+
+                <field name="show_category_count" type="radio" default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOWCATEGORYCOUNT_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWCATEGORYCOUNT_DESC"
+                    >
+                    <option value="1">JSHOW
+                    </option>
+                    <option value="0">JHIDE
+                    </option>
+                </field>
+
+                <field name="show_noauth" type="radio" default="0"
+                    label="MOD_DIGI_ARTCATS_FIELD_SHOWNOAUTH_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWNOAUTH_DESC"
+                    >
+                    <option value="1">JSHOW
+                    </option>
+                    <option value="0">JHIDE
+                    </option>
+                </field>
+
+                <field name="show_date" type="radio" default="0"
+                    label="JDATE"
+                    description="MOD_DIGI_ARTCATS_FIELD_SHOWDATE_DESC"
+                    >
+                    <option value="1">JSHOW
+                    </option>
+                    <option value="0">JHIDE
+                    </option>
+                </field>
+
+                <field name="show_date_field" type="list" default="created"
+                    label="MOD_DIGI_ARTCATS_FIELD_DATEFIELD_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_DATEFIELD_DESC"
+                    >
+                    <option value="created">MOD_DIGI_ARTCATS_OPTION_CREATED_VALUE
+                    </option>
+                    <option value="modified">MOD_DIGI_ARTCATS_OPTION_MODIFIED_VALUE
+                    </option>
+                    <option value="publish_up">MOD_DIGI_ARTCATS_OPTION_STARTPUBLISHING_VALUE
+                    </option>
+                </field>
+
+                <field name="show_date_format" type="text"
+                    default="Y-m-d H:i:s"
+                    label="MOD_DIGI_ARTCATS_FIELD_DATEFIELDFORMAT_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_DATEFIELDFORMAT_DESC" />
+
+                <field name="override_menuitemid" type="menuitem"
+                    default=""
+                    label="MOD_DIGI_ARTCATS_FIELD_OVERRIDEMENUITEMID_LABEL"
+                    description="MOD_DIGI_ARTCATS_FIELD_OVERRIDEMENUITEMID_DESC">
+                    <option value="0">JDEFAULT
+                    </option>
+                </field>
+
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					
+				<field name="liktoall_text" type="text"
+                    label="Testo Link to All"
+                    description="Testo che appare sotto al modulo per il link a Leggi tutti" />
+					
+				<field name="liktoall_url" type="text"
+                    label="URL Link to All"
+                    description="URL del link a Leggi tutti" />
+
+                <field name="owncache" type="list" default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+
+                <field name="cache_time" type="text" default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
