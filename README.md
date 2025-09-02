@@ -17,10 +17,57 @@
 1. Download or clone the repository into your Joomla `/modules/` directory:
    ```bash
    git clone https://github.com/yourusername/mod_digi_artcats.git
+   ```
+2. Install via Joomla Extension Manager or manually place the folder.
+3. Enable the module and assign it to a position and menu item.
 
-    Install via Joomla Extension Manager or manually place the folder.
+## 🧩 Folder Structure
 
-    Enable the module and assign it to a position and menu item.
+```
+mod_digi_artcats/
+├── mod_digi_artcats.php          # Entry point
+├── mod_digi_artcats.xml          # Manifest file
+├── src/
+│   └── Helper/
+│       └── DigiArtCatsHelper.php # Business logic
+├── tmpl/
+│   ├── default.php               # Main layout
+│   └── default_items.php         # Item rendering
+├── language/
+│   └── en-GB/
+│       └── mod_digi_artcats.ini  # Language strings
+├── index.html                    # Security file
+```
 
-🧩 Folder Structure
-Codice
+## 🛠 Configuration Parameters
+
+| Parameter                  | Description                                  |
+|---------------------------|----------------------------------------------|
+| Mode                      | `normal` or `dynamic`                        |
+| Parent Category           | ID of the root category                      |
+| Show Articles             | Include articles in the listing             |
+| Show Empty Categories     | Display categories with no articles         |
+| Max Level                 | Depth of category tree                      |
+| Article Ordering          | Sort articles by date, title, etc.          |
+| Heading Level             | HTML heading tag level (e.g. h3, h4)         |
+| Show Date                 | Display article creation or publish date     |
+
+## 📚 Compatibility
+
+- Joomla 4.x and Joomla 5.x
+- PHP 8.1+
+- Fully PSR-12 compliant
+- Tested with YOOtheme and Cassiopeia templates
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+## 📄 License
+
+GNU General Public License v2 or later. See the [LICENSE.txt](LICENSE.txt) file for details.
+
+## 🙌 Credits
+
+Developed by [Fab](https://github.com/yourusername)  
+Inspired by Joomla’s native `mod_articles_categories` module
