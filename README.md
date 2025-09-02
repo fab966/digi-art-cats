@@ -63,7 +63,6 @@ mod_digi_artcats/
 - Joomla 4.x and Joomla 5.x
 - PHP 8.1+
 - Fully PSR-12 compliant
-- Tested with YOOtheme and Cassiopeia templates
 
 ## 🤝 Contributing
 
@@ -75,5 +74,5 @@ GNU General Public License v2 or later. See the [LICENSE.txt](LICENSE.txt) file 
 
 ## 🙌 Credits
 
-Developed by [Fab](https://github.com/yourusername)  
-Inspired by Joomla’s native `mod_articles_categories` module
+Developed by [Fab](https://github.com/fab966)  
+Inspired by Joomla’s native `mod_articles_categories` module and from ArtCats25 Module of Omar E. Ramos
