@@ -1,8 +1,8 @@
 ![Joomla 4 & 5](https://img.shields.io/badge/Joomla-4%20%7C%205-green?logo=joomla)
 ![License GPL 2+](https://img.shields.io/badge/License-GPL%202%2B-blue)
-![Stable Version](https://img.shields.io/badge/Version-Stable-orange)
 ![PHP 8+](https://img.shields.io/badge/PHP-8%2B-blue?logo=php)
 ![Latest Release](https://img.shields.io/github/v/release/fab966/digi-art-cats?label=Version&color=orange)
+![Stable Version](https://img.shields.io/badge/Version-Stable-yellow)
 
 # Digi ArtCats Module for Joomla
 
