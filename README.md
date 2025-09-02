@@ -1,3 +1,9 @@
+![Joomla 4 & 5](https://img.shields.io/badge/Joomla-4%20%7C%205-green?logo=joomla)
+![License GPL 2+](https://img.shields.io/badge/License-GPL%202%2B-blue)
+![Stable Version](https://img.shields.io/badge/Version-Stable-orange)
+![PHP 8+](https://img.shields.io/badge/PHP-8%2B-blue?logo=php)
+
+
 # Digi ArtCats Module for Joomla
 
 **Digi ArtCats** is a flexible Joomla 4/5 module that dynamically displays categories and articles from the `com_content` component. Designed for both static and dynamic contexts, it supports nested categories, article listings, and customizable layouts.
