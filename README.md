@@ -3,6 +3,8 @@
 ![Stable Version](https://img.shields.io/badge/Version-Stable-orange)
 ![PHP 8+](https://img.shields.io/badge/PHP-8%2B-blue?logo=php)
 ![Latest Release](https://img.shields.io/github/v/release/fab966/mod_digi_artcats?label=Version&color=orange)
+![Latest Tag](https://img.shields.io/github/v/tag/fab966/mod_digi_artcats?label=Version&color=orange)
+
 
 
 # Digi ArtCats Module for Joomla
