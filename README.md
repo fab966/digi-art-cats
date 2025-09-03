@@ -23,7 +23,7 @@
 
 1. Download or clone the repository into your Joomla `/modules/` directory:
    ```bash
-   git clone https://github.com/yourusername/mod_digi_artcats.git
+   git clone https://github.com/fab966/mod_digi_artcats.git
    ```
 2. Install via Joomla Extension Manager or manually place the folder.
 3. Enable the module and assign it to a position and menu item.
