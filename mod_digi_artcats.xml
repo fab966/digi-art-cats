@@ -8,7 +8,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>public2@digitest.net</authorEmail>
     <authorUrl>digitest.net</authorUrl>
-    <version>5.0.2</version>
+    <version>5.0.3</version>
     <description>MOD_DIGI_ARTCATS_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Module\DigiArtCats</namespace>
     <files>
@@ -422,3 +422,4 @@
         </fields>
     </config>
 </extension>
+
